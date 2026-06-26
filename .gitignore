@@ -1,0 +1,48 @@
+cat > .gitignore << 'EOF'
+# --- Virtual environment ---
+venv/
+.venv/
+env/
+
+# --- Python cache/bytecode ---
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# --- Jupyter ---
+.ipynb_checkpoints/
+
+# --- Model weights & checkpoints (track the training code, not the binaries) ---
+models/
+*.pt
+*.pth
+*.h5
+*.onnx
+*.tflite
+*.engine
+
+# --- Datasets (track the download script, not the data itself) ---
+data/raw/
+data/processed/
+
+# --- Secrets & credentials (NEVER commit these) ---
+.env
+kaggle.json
+*.key
+*credentials*
+
+# --- OS junk ---
+.DS_Store
+Thumbs.db
+
+# --- Editor/IDE junk ---
+.vscode/
+.idea/
+*.swp
+
+# --- Logs ---
+*.log
+runs/
+EOF
