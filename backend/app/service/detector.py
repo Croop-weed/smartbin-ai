@@ -9,7 +9,7 @@ class GarbageDetector:
 
         results = self.model.predict(
             source=image_path,
-            conf=0.25,
+            conf=0.40,
             verbose=False,
             device="cpu"
         )

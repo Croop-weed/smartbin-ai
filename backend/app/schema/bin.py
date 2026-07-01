@@ -8,6 +8,18 @@ class BinCreate(BaseModel):
     location: str
     model_config = ConfigDict(from_attributes=True)
 
+
+class DetectionItem(BaseModel):
+    class_id: int
+    class_name: str
+    confidence: float
+    bbox: list[float]
+
+
+class BinDetectionPayload(BaseModel):
+    filename: str
+    detections: list[DetectionItem] = []
+
 class BinResponse(BaseModel):
     id: uuid.UUID
     name: str
